@@ -1,16 +1,19 @@
+
+
+
 class Ksiazka:
-    def _init_(self, tytul, autor, rok):
+    def __init__(self, tytul, autor, rok):
         self.tytul = tytul
         self.autor = autor
         self.rok = rok
 
 class Egzemplarz:
-    def _init_(self, rok_wydania, wypozyczony):
+    def __init__(self, rok_wydania, wypozyczony):
         self.rok_wydania = rok_wydania
         self.wypozyczony = wypozyczony
 
 class Czytelnik:
-    def _init_(self, nazwisko):
+    def __init__(self, nazwisko):
         self.nazwisko = nazwisko
 
 class Biblioteka:
@@ -21,7 +24,7 @@ class Biblioteka:
     lista_ostateczna = []
     czy_jest_na_liscie = False
 
-    def _init_(self, limit_wypozyczen):
+    def __init__(self, limit_wypozyczen):
         self.limit_wypozyczen = limit_wypozyczen
 
     def sortuj(self, e):
