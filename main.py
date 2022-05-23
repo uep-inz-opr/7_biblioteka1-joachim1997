@@ -59,7 +59,7 @@ class Biblioteka:
 
 n = int(input()) #liczba egzemplarzy 
 lista_ksiazek = [eval(input().strip()) for ksiazka in range(n)]
-biblioteka = Biblioteka(n)
+biblioteka = Biblioteka(10)
 
 for ksiazka_pozycja in lista_ksiazek:
     ksiazka = Ksiazka(ksiazka_pozycja[0], ksiazka_pozycja[1], ksiazka_pozycja[2])
