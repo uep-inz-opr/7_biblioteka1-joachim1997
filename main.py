@@ -1,3 +1,18 @@
+class Ksiazka:
+    def _init_(self, tytul, autor, rok):
+        self.tytul = tytul
+        self.autor = autor
+        self.rok = rok
+
+class Egzemplarz:
+    def _init_(self, rok_wydania, wypozyczony):
+        self.rok_wydania = rok_wydania
+        self.wypozyczony = wypozyczony
+
+class Czytelnik:
+    def _init_(self, nazwisko):
+        self.nazwisko = nazwisko
+
 class Biblioteka:
   
     lista_ksiazek = []
@@ -42,26 +57,9 @@ class Biblioteka:
         return str(wynik)
 
 
-class Ksiazka:
-    def _init_(self, tytul, autor, rok):
-        self.tytul = tytul
-        self.autor = autor
-        self.rok = rok
-
-class Egzemplarz:
-    def _init_(self, rok_wydania, wypozyczony):
-        self.rok_wydania = rok_wydania
-        self.wypozyczony = wypozyczony
-
-class Czytelnik:
-    def _init_(self, nazwisko):
-        self.nazwisko = nazwisko
-
-
-
 n = int(input()) #liczba egzemplarzy 
 lista_ksiazek = [eval(input().strip()) for ksiazka in range(n)]
-biblioteka = Biblioteka()
+biblioteka = Biblioteka(n)
 
 for ksiazka_pozycja in lista_ksiazek:
     ksiazka = Ksiazka(ksiazka_pozycja[0], ksiazka_pozycja[1], ksiazka_pozycja[2])
